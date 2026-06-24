@@ -4,6 +4,12 @@
 
 A Kimi CLI skill for predicting FIFA World Cup match outcomes, analyzing group-stage qualification scenarios, and researching historical head-to-head records.
 
+## 🌐 Languages
+
+- [English](./README.md)
+- [中文 (Chinese)](./README.zh.md)
+- [日本語 (Japanese)](./README.ja.md)
+
 ## Features
 
 - **Real-time data**: Fetch current fixtures, standings, scores, and FIFA rankings via football-data.org.
