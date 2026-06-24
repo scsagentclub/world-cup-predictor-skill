@@ -1,5 +1,7 @@
 # World Cup Predictor Skill
 
+[中文](./README.zh.md) | [日本語](./README.ja.md)
+
 A Kimi CLI skill for predicting FIFA World Cup match outcomes, analyzing group-stage qualification scenarios, and researching historical head-to-head records.
 
 ## Features
