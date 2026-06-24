@@ -4,6 +4,12 @@
 
 用于 Kimi CLI 的 FIFA 世界杯预测技能：预测比赛结果、分析小组出线形势、查询历史交锋记录。
 
+## 🌐 语言
+
+- [English](./README.md)
+- [中文](./README.zh.md)
+- [日本語](./README.ja.md)
+
 ## 功能特性
 
 - **实时数据**：通过 football-data.org 获取赛程、积分榜、比分和 FIFA 排名。
