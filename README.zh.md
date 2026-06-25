@@ -2,11 +2,11 @@
 
 # 🏆 世界杯预测 Skill
 
-**适用于 Kimi CLI 的 AI 驱动 FIFA 世界杯预测工具**
+**适用于各类 AI Agent 的 FIFA 世界杯预测与分析工具**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![Kimi CLI](https://img.shields.io/badge/Kimi-CLI-green.svg)]()
+[![Agent Compatible](https://img.shields.io/badge/Agent-Compatible-brightgreen.svg)]()
 
 [English](./README.md) | [日本語](./README.ja.md)
 
@@ -31,6 +31,23 @@
 | 🎲 **小组模拟** | 蒙特卡洛模拟每组出线概率。 |
 | ⚔️ **历史交锋** | 支持 API 查询，失败时回退到网络搜索。 |
 | 🖥️ **统一入口** | 一个命令入口完成所有操作。 |
+
+---
+
+## 🤖 兼容的 Agent
+
+本 skill 适用于任何支持以下能力的 AI Agent 平台：
+
+- 运行本地 Python 脚本
+- 读取 markdown 技能说明
+- 执行 shell 命令
+
+已测试 / 兼容：
+
+- [Kimi Code CLI](https://kimi.moonshot.cn/)
+- [OpenClaw](https://github.com/openclaw)
+- [Hermes Agent](https://github.com/hermes-agent)
+- 其他 MCP / ACP 兼容 Agent
 
 ---
 
@@ -66,7 +83,19 @@ Most likely score (90 min): 1-1
 
 ## 📦 安装
 
-### 方式一：复制到 Kimi skill 目录
+### 方式一：复制到你的 Agent skill 目录
+
+大多数 Agent 会从以下目录加载 skill：
+
+```bash
+~/.config/agents/skills/world-cup-predictor/
+# 或
+~/.kimi/skills/world-cup-predictor/
+# 或
+~/.claude/skills/world-cup-predictor/
+```
+
+复制本文件夹到该目录：
 
 ```bash
 cp -r world-cup-predictor ~/.config/agents/skills/
@@ -74,7 +103,10 @@ cp -r world-cup-predictor ~/.config/agents/skills/
 
 ### 方式二：安装打包好的 skill 文件
 
+如果你的 Agent 支持 `.skill` 包：
+
 ```bash
+# Kimi CLI 示例
 kimi skill install world-cup-predictor.skill
 ```
 
