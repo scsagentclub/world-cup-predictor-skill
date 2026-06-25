@@ -44,9 +44,9 @@
 
 テスト済み / 対応：
 
-- [Kimi Code CLI](https://kimi.moonshot.cn/)
-- [OpenClaw](https://github.com/openclaw)
-- [Hermes Agent](https://github.com/hermes-agent)
+- Kimi Code CLI
+- OpenClaw
+- Hermes Agent
 - その他 MCP / ACP 互換 Agent
 
 ---
