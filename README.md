@@ -1,8 +1,18 @@
-# World Cup Predictor Skill
+<div align="center">
+
+# 🏆 World Cup Predictor Skill
+
+**AI-powered FIFA World Cup predictions for Kimi CLI**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![Kimi CLI](https://img.shields.io/badge/Kimi-CLI-green.svg)]()
 
 [中文](./README.zh.md) | [日本語](./README.ja.md)
 
-A Kimi CLI skill for predicting FIFA World Cup match outcomes, analyzing group-stage qualification scenarios, and researching historical head-to-head records.
+</div>
+
+---
 
 ## 🌐 Languages
 
@@ -10,50 +20,83 @@ A Kimi CLI skill for predicting FIFA World Cup match outcomes, analyzing group-s
 - [中文 (Chinese)](./README.zh.md)
 - [日本語 (Japanese)](./README.ja.md)
 
-## Features
+---
 
-- **Real-time data**: Fetch current fixtures, standings, scores, and FIFA rankings via football-data.org.
-- **Match prediction**: Elo-derived model with automatic recent-form adjustment.
-- **Group simulation**: Monte Carlo advancement probabilities for each group.
-- **Historical H2H**: Head-to-head lookup with API/search fallback.
-- **Unified CLI**: `wcp.py` provides a single entry point for all commands.
+## ✨ Features
 
-## Installation
+| Feature | Description |
+|---------|-------------|
+| 📡 **Real-time Data** | Fetch live fixtures, standings, scores, and FIFA rankings via football-data.org. |
+| 🎯 **Match Prediction** | Elo-derived model with automatic recent-form adjustment. |
+| 🎲 **Group Simulation** | Monte Carlo advancement probabilities for every group. |
+| ⚔️ **Historical H2H** | Head-to-head lookup with API/search fallback. |
+| 🖥️ **Unified CLI** | One command entry point for all operations. |
 
-Place this directory in one of the Kimi skill locations, for example:
+---
+
+## 🚀 Quick Start
 
 ```bash
-~/.config/agents/skills/world-cup-predictor/
+# Standings & fixtures
+python3 scripts/wcp.py standings --fixtures
+
+# Predict a match
+python3 scripts/wcp.py predict Argentina France --knockout
+
+# Group advancement simulation
+python3 scripts/wcp.py simulate C
+
+# Head-to-head history
+python3 scripts/wcp.py h2h Argentina Brazil
 ```
 
-Or install the packaged skill file:
+### Example Output
+
+```text
+Match: Argentina vs France
+FIFA points: Argentina 1855 | France 1840
+Form adjustment: Argentina +0 | France +0
+Elo estimates: 1732.5 vs 1730.0
+Expected goals: 1.33 - 1.32
+Predicted probabilities: Argentina win 37.4% | Draw 26.1% | France win 36.5%
+Most likely score (90 min): 1-1
+```
+
+---
+
+## 📦 Installation
+
+### Option 1: Copy to Kimi skills directory
+
+```bash
+cp -r world-cup-predictor ~/.config/agents/skills/
+```
+
+### Option 2: Install packaged skill
 
 ```bash
 kimi skill install world-cup-predictor.skill
 ```
 
-## Configuration
+---
+
+## ⚙️ Configuration
 
 ```bash
 cp .env.example .env
 # Edit .env and add your API keys
 ```
 
-- `FOOTBALL_DATA_API_KEY` from [football-data.org](https://www.football-data.org/)
-- `API_FOOTBALL_KEY` from [api-football.com](https://www.api-football.com/) (optional, for H2H)
+| Variable | Source | Required |
+|----------|--------|----------|
+| `FOOTBALL_DATA_API_KEY` | [football-data.org](https://www.football-data.org/) | Recommended |
+| `API_FOOTBALL_KEY` | [api-football.com](https://www.api-football.com/) | Optional (for H2H) |
 
-Without API keys the scripts fall back to sample data and web-search hints.
+> 💡 Without API keys the scripts fall back to sample data and web-search hints.
 
-## Quick Start
+---
 
-```bash
-python3 scripts/wcp.py standings --fixtures
-python3 scripts/wcp.py predict Argentina France --knockout
-python3 scripts/wcp.py simulate C
-python3 scripts/wcp.py h2h Argentina Brazil
-```
-
-## Scripts
+## 📜 Available Scripts
 
 | Script | Purpose |
 |--------|---------|
@@ -64,11 +107,21 @@ python3 scripts/wcp.py h2h Argentina Brazil
 | `scripts/simulate_group.py` | Monte Carlo group advancement simulation |
 | `scripts/fetch_h2h.py` | Historical head-to-head lookup |
 
-## References
+---
 
-- `references/tournament_format.md` — World Cup formats and tie-breaker rules.
-- `references/prediction_methods.md` — Prediction methodology and calibration notes.
+## 📚 References
 
-## License
+- [`references/tournament_format.md`](./references/tournament_format.md) — World Cup formats and tie-breaker rules.
+- [`references/prediction_methods.md`](./references/prediction_methods.md) — Prediction methodology and calibration notes.
 
-MIT
+---
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome! Feel free to open an issue to discuss improvements.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
