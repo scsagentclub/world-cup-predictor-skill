@@ -2,11 +2,11 @@
 
 # 🏆 ワールドカップ予測 Skill
 
-**Kimi CLI 用の AI 駆動 FIFA ワールドカップ予測ツール**
+**あらゆる AI Agent に対応した FIFA ワールドカップ予測・分析ツール**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![Kimi CLI](https://img.shields.io/badge/Kimi-CLI-green.svg)]()
+[![Agent Compatible](https://img.shields.io/badge/Agent-Compatible-brightgreen.svg)]()
 
 [English](./README.md) | [中文](./README.zh.md)
 
@@ -31,6 +31,23 @@
 | 🎲 **グループシミュレーション** | モンテカルロ法で各グループの突破確率を算出。 |
 | ⚔️ **過去対戦 (H2H)** | API 検索に失敗した場合は Web 検索にフォールバック。 |
 | 🖥️ **統一 CLI** | `wcp.py` ですべてのコマンドを実行可能。 |
+
+---
+
+## 🤖 対応 Agent
+
+本 skill は以下の能力を持つ AI Agent プラットフォームで利用可能です：
+
+- ローカル Python スクリプトの実行
+- markdown スキル説明の読み取り
+- shell コマンドの実行
+
+テスト済み / 対応：
+
+- [Kimi Code CLI](https://kimi.moonshot.cn/)
+- [OpenClaw](https://github.com/openclaw)
+- [Hermes Agent](https://github.com/hermes-agent)
+- その他 MCP / ACP 互換 Agent
 
 ---
 
@@ -66,7 +83,19 @@ Most likely score (90 min): 1-1
 
 ## 📦 インストール
 
-### 方法 1：Kimi skill ディレクトリにコピー
+### 方法 1：Agent の skill ディレクトリにコピー
+
+多くの Agent は以下のようなディレクトリから skill を読み込みます：
+
+```bash
+~/.config/agents/skills/world-cup-predictor/
+# または
+~/.kimi/skills/world-cup-predictor/
+# または
+~/.claude/skills/world-cup-predictor/
+```
+
+本フォルダをそこにコピー：
 
 ```bash
 cp -r world-cup-predictor ~/.config/agents/skills/
@@ -74,7 +103,10 @@ cp -r world-cup-predictor ~/.config/agents/skills/
 
 ### 方法 2：パッケージ化された skill ファイルをインストール
 
+お使いの Agent が `.skill` パッケージに対応している場合：
+
 ```bash
+# Kimi CLI の例
 kimi skill install world-cup-predictor.skill
 ```
 
