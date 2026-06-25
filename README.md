@@ -2,11 +2,11 @@
 
 # 🏆 World Cup Predictor Skill
 
-**AI-powered FIFA World Cup predictions for Kimi CLI**
+**AI Agent skill for FIFA World Cup predictions and analysis**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
-[![Kimi CLI](https://img.shields.io/badge/Kimi-CLI-green.svg)]()
+[![Agent Compatible](https://img.shields.io/badge/Agent-Compatible-brightgreen.svg)]()
 
 [中文](./README.zh.md) | [日本語](./README.ja.md)
 
@@ -31,6 +31,23 @@
 | 🎲 **Group Simulation** | Monte Carlo advancement probabilities for every group. |
 | ⚔️ **Historical H2H** | Head-to-head lookup with API/search fallback. |
 | 🖥️ **Unified CLI** | One command entry point for all operations. |
+
+---
+
+## 🤖 Compatible Agents
+
+This skill can be used by any AI Agent platform that supports:
+
+- Running local Python scripts
+- Reading markdown skill instructions
+- Executing shell commands
+
+Tested / compatible with:
+
+- [Kimi Code CLI](https://kimi.moonshot.cn/)
+- [OpenClaw](https://github.com/openclaw)
+- [Hermes Agent](https://github.com/hermes-agent)
+- Other MCP / ACP compatible agents
 
 ---
 
@@ -66,15 +83,30 @@ Most likely score (90 min): 1-1
 
 ## 📦 Installation
 
-### Option 1: Copy to Kimi skills directory
+### Option 1: Copy to your agent's skills directory
+
+Most agents load skills from a directory like:
+
+```bash
+~/.config/agents/skills/world-cup-predictor/
+# or
+~/.kimi/skills/world-cup-predictor/
+# or
+~/.claude/skills/world-cup-predictor/
+```
+
+Copy this folder there:
 
 ```bash
 cp -r world-cup-predictor ~/.config/agents/skills/
 ```
 
-### Option 2: Install packaged skill
+### Option 2: Install packaged skill file
+
+If your agent supports `.skill` packages:
 
 ```bash
+# Kimi CLI example
 kimi skill install world-cup-predictor.skill
 ```
 
