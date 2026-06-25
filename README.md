@@ -44,9 +44,9 @@ This skill can be used by any AI Agent platform that supports:
 
 Tested / compatible with:
 
-- [Kimi Code CLI](https://kimi.moonshot.cn/)
-- [OpenClaw](https://github.com/openclaw)
-- [Hermes Agent](https://github.com/hermes-agent)
+- Kimi Code CLI
+- OpenClaw
+- Hermes Agent
 - Other MCP / ACP compatible agents
 
 ---
