@@ -44,9 +44,9 @@
 
 已测试 / 兼容：
 
-- [Kimi Code CLI](https://kimi.moonshot.cn/)
-- [OpenClaw](https://github.com/openclaw)
-- [Hermes Agent](https://github.com/hermes-agent)
+- Kimi Code CLI
+- OpenClaw
+- Hermes Agent
 - 其他 MCP / ACP 兼容 Agent
 
 ---
